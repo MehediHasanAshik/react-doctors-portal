@@ -1,0 +1,29 @@
+[debug] [2022-08-14T16:24:45.025Z] ----------------------------------------------------------------------
+[debug] [2022-08-14T16:24:45.029Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\mhash\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-08-14T16:24:45.030Z] CLI Version:   11.1.0
+[debug] [2022-08-14T16:24:45.030Z] Platform:      win32
+[debug] [2022-08-14T16:24:45.030Z] Node Version:  v16.13.2
+[debug] [2022-08-14T16:24:45.032Z] Time:          Sun Aug 14 2022 22:24:45 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-08-14T16:24:45.032Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-14T16:24:45.158Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-14T16:24:45.159Z] > authorizing via signed-in user (mhashik.ashik@gmail.com)
+[debug] [2022-08-14T16:24:45.159Z] [iam] checking project react-doctors-portal-d323a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-14T16:24:45.164Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-doctors-portal-d323a:testIamPermissions [none]
+[debug] [2022-08-14T16:24:45.165Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-doctors-portal-d323a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-14T16:24:47.725Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-doctors-portal-d323a:testIamPermissions 200
+[debug] [2022-08-14T16:24:47.725Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/react-doctors-portal-d323a:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-14T16:24:47.727Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/react-doctors-portal-d323a [none]
+[debug] [2022-08-14T16:24:50.988Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/react-doctors-portal-d323a 200
+[debug] [2022-08-14T16:24:50.989Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/react-doctors-portal-d323a {"projectId":"react-doctors-portal-d323a","projectNumber":"786860274164","displayName":"react-doctors-portal","name":"projects/react-doctors-portal-d323a","resources":{"hostingSite":"react-doctors-portal-d323a"},"state":"ACTIVE","etag":"1_198b6f60-53e4-4ec4-8686-b3f3401b04f8"}
+[info] 
+[info] === Deploying to 'react-doctors-portal-d323a'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-14T16:24:51.003Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/react-doctors-portal-d323a [none]
+[debug] [2022-08-14T16:25:21.058Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/react-doctors-portal-d323a
+[debug] [2022-08-14T16:25:21.551Z] FirebaseError: Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/react-doctors-portal-d323a
+    at RetryOperation._fn (C:\Users\mhash\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:237:35)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project react-doctors-portal-d323a. Please make sure the project exists and your account has permission to access it.
