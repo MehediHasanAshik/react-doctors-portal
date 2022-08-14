@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "react-doctors-portal-d323a",
+    "staging": "react-doctors-portal-d323a",
+    "heroku": "react-doctors-portal-d323a"
+  },
+  "targets": {}
+}
