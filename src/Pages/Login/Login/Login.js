@@ -22,7 +22,7 @@ const Login = () => {
     }
 
     const handleFormSUbmit = (e) => {
-        loginUser(loginData.email, loginData.password, navigate);
+        loginUser(loginData.email, loginData.password, location, navigate);
 
         e.preventDefault();
     }
@@ -74,7 +74,7 @@ const Login = () => {
                         </NavLink>
                     </form>
                     <hr />
-                    <Button sx={{mb: 3}} onClick={handleGoogleSignIn} variant='contained'>Sign In with Google </Button>
+                    <Button sx={{ mb: 3 }} onClick={handleGoogleSignIn} variant='contained'>Sign In with Google </Button>
                     <br />
 
                     {isLoading && <CircularProgress />}

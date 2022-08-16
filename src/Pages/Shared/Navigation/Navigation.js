@@ -6,8 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link, NavLink } from 'react-router-dom';
-import Appointment from '../../Appointment/Appointment/Appointment';
+import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Navigation = () => {
@@ -50,7 +49,7 @@ const Navigation = () => {
                                 </Button>
                             </NavLink>}
                     </Typography>
-                    <Typography variant='h7' sx={{ fontWeight: 500}}>
+                    <Typography variant='h7' sx={{ fontWeight: 500 }}>
                         {user.displayName}
                     </Typography>
                     {

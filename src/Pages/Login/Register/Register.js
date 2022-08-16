@@ -1,13 +1,14 @@
 import { Alert, Button, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import login from '../../../images/login.png';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const Register = () => {
 
-    const [loginData, setLoginData] = useState({})
+    const [loginData, setLoginData] = useState({});
+    const navigate = useNavigate();
 
     const { user, authError, registerUser, isLoading } = useAuth();
 
@@ -25,7 +26,7 @@ const Register = () => {
             alert('Your password did not match');
             return;
         }
-        registerUser(loginData.email, loginData.password, loginData.name);
+        registerUser(loginData.email, loginData.password, loginData.name, navigate);
 
 
 
@@ -40,7 +41,7 @@ const Register = () => {
                     <Typography variant='h6' sx={{ fontWeight: 600, color: 'info.main' }}>
                         Register
                     </Typography>
-                    { !isLoading && <form onSubmit={handleFormSUbmit}>
+                    {!isLoading && <form onSubmit={handleFormSUbmit}>
                         <TextField
                             sx={{ width: '80%', my: 2 }}
                             type='text'
@@ -91,7 +92,7 @@ const Register = () => {
                                 Already Registered? Login
                             </Button>
                         </NavLink>
-                    </form> }
+                    </form>}
                     {isLoading && <CircularProgress />}
                     {user.email && <Alert severity="info">You Have Successfully Registered to The Site</Alert>}
                     {authError && <Alert severity="error">{authError}</Alert>}
