@@ -3,7 +3,7 @@ import React from 'react';
 import BookingModal from '../BookingModal/BookingModal';
 
 const Booking = ({ booking, date, setBookingSuccess }) => {
-    const { name, time, space } = booking;
+    const { name, time, space, price } = booking;
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -18,6 +18,9 @@ const Booking = ({ booking, date, setBookingSuccess }) => {
                     </Typography>
                     <Typography sx={{ fontWeight: 500 }} variant='h7'>
                         {time}
+                    </Typography>
+                    <Typography variant='caption' display='block'>
+                        Price: ${price}
                     </Typography>
                     <Typography variant='caption' display='block'>
                         {space} Spaces Available

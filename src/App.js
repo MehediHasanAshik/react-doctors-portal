@@ -10,6 +10,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
 import AddDoctor from './Pages/Dashboard/AddDoctor/AddDoctor';
 import AdminRoute from './Pages/Login/AdminRoute/AdminRoute';
+import Payment from './Pages/Dashboard/Payment/Payment';
 
 function App() {
   return (
@@ -26,10 +27,8 @@ function App() {
                 <Appointment />
               </PrivateRoute>} />
             <Route path='/dashboard' element={<Dashboard />}>
-              <Route path='makeAdmin'
-                element={<AdminRoute>
-                  <MakeAdmin />
-                </AdminRoute>} />
+              <Route path='payment/:appointmentId' element={<Payment />} />
+              <Route path='makeAdmin' element={<AdminRoute><MakeAdmin /></AdminRoute>} />
               <Route path='addDoctor' element={<AddDoctor />} />
             </Route>
           </Routes>
