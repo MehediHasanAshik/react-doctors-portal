@@ -12,7 +12,7 @@ const Doctor = ({ doctor }) => {
             </Typography>
 
             <Typography sx={{ color: 'text.secondary', fontSize: '12px' }}>
-                <EmailOutlined /> <span>{email}</span>
+                <EmailOutlined style={{verticalAlign:"middle"}} /> <span>{email}</span>
             </Typography>
 
         </Grid>
