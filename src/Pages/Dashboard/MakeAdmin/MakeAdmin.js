@@ -13,7 +13,7 @@ const MakeAdmin = () => {
 
     const handleAdminSubmit = (e) => {
         const user = { email };
-        fetch('https://intense-sands-21625.herokuapp.com/users/admin', {
+        fetch('http://127.0.0.1:5000/users/admin', {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,

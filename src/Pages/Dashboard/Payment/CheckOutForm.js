@@ -18,7 +18,7 @@ const CheckOutForm = ({ appointment }) => {
     const [processing, setProcessing] = useState(false);
 
     useEffect(() => {
-        fetch('https://intense-sands-21625.herokuapp.com/create-payment-intent', {
+        fetch('http://127.0.0.1:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -50,7 +50,7 @@ const CheckOutForm = ({ appointment }) => {
             setSuccess('');
         } else {
             setError('');
-            console.log(paymentMethod);
+            // console.log(paymentMethod);
         }
 
         //payment Intent
@@ -73,7 +73,7 @@ const CheckOutForm = ({ appointment }) => {
         else {
             setError('');
             setSuccess('Your Payment Processed Successfully');
-            console.log(paymentIntent);
+            // console.log(paymentIntent);
             setProcessing(false);
 
             //save to database
@@ -83,7 +83,7 @@ const CheckOutForm = ({ appointment }) => {
                 last4: paymentMethod.card.last4,
                 transaction: paymentIntent.client_secret.slice('_secret')[0]
             }
-            const url = `https://intense-sands-21625.herokuapp.com/appointments/${_id}`;
+            const url = `http://127.0.0.1:5000/appointments/${_id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -92,7 +92,6 @@ const CheckOutForm = ({ appointment }) => {
                 body: JSON.stringify(payment)
             })
                 .then(res => res.json())
-                .then(data => console.log(data))
 
         }
     }

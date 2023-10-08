@@ -46,7 +46,7 @@ const BookingModal = ({ open, handleClose, booking, date, setBookingSuccess }) =
             date: date.toLocaleDateString()
         }
         //send to server
-        fetch('https://intense-sands-21625.herokuapp.com/appointments', {
+        fetch('http://127.0.0.1:5000/appointments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

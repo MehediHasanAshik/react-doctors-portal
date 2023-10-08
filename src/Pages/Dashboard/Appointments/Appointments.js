@@ -9,7 +9,7 @@ const Appointments = ({ date }) => {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        const url = `https://intense-sands-21625.herokuapp.com/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
+        const url = `http://127.0.0.1:5000/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
         fetch(url)
             .then(res => res.json())
             .then(data => setAppointments(data))
