@@ -9,7 +9,7 @@ const OurDoctors = () => {
     const [doctors, setDoctors] = useState([]);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/doctors')
+        fetch('https://reactdoctorsportal.up.railway.app/doctors')
             .then(res => res.json())
             .then(data => setDoctors(data));
     }, [])

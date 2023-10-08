@@ -9,7 +9,7 @@ const Appointments = ({ date }) => {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        const url = `http://127.0.0.1:5000/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
+        const url = `https://reactdoctorsportal.up.railway.app/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
         fetch(url)
             .then(res => res.json())
             .then(data => setAppointments(data))

@@ -15,7 +15,7 @@ const Payment = () => {
   const [appointment, setAppointment] = useState({});
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/appointments/${appointmentId}`)
+    fetch(`https://reactdoctorsportal.up.railway.app/appointments/${appointmentId}`)
       .then((res) => res.json())
       .then((data) => setAppointment(data));
   }, [appointmentId]);

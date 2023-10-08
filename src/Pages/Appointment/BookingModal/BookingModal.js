@@ -46,7 +46,7 @@ const BookingModal = ({ open, handleClose, booking, date, setBookingSuccess }) =
             date: date.toLocaleDateString()
         }
         //send to server
-        fetch('http://127.0.0.1:5000/appointments', {
+        fetch('https://reactdoctorsportal.up.railway.app/appointments', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

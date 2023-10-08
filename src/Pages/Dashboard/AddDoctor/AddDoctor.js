@@ -18,7 +18,7 @@ const AddDoctor = () => {
         formData.append('email', email);
         formData.append('image', image);
 
-        fetch('http://127.0.0.1:5000/doctors', {
+        fetch('https://reactdoctorsportal.up.railway.app/doctors', {
             method: 'POST',
             body: formData
         })

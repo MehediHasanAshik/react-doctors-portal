@@ -13,7 +13,7 @@ const MakeAdmin = () => {
 
     const handleAdminSubmit = (e) => {
         const user = { email };
-        fetch('http://127.0.0.1:5000/users/admin', {
+        fetch('https://reactdoctorsportal.up.railway.app/users/admin', {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,

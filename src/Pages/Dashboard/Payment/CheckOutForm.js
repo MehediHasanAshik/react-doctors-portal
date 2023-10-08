@@ -18,7 +18,7 @@ const CheckOutForm = ({ appointment }) => {
     const [processing, setProcessing] = useState(false);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:5000/create-payment-intent', {
+        fetch('https://reactdoctorsportal.up.railway.app/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -83,7 +83,7 @@ const CheckOutForm = ({ appointment }) => {
                 last4: paymentMethod.card.last4,
                 transaction: paymentIntent.client_secret.slice('_secret')[0]
             }
-            const url = `http://127.0.0.1:5000/appointments/${_id}`;
+            const url = `https://reactdoctorsportal.up.railway.app/appointments/${_id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
